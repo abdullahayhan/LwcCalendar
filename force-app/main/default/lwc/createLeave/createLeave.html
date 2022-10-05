@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-p-top_x-small">
+        <lightning-button label={clickedButtonLabel} title="Add Off Duty Employee" onclick={showcomp}
+        style="padding:5px;">
+        </lightning-button>
+    </div>
+    <template if:true={addOffDutyEmployee}>
+        <div class="slds-grid">
+            <lightning-card>
+                <lightning-record-form object-api-name={objectApiName} fields={fields} columns="2" onsuccess={handleSuccess}>
+                </lightning-record-form>
+            </lightning-card>
+        </div>
+    </template>
+</template>

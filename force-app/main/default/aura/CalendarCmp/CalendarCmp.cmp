@@ -1,0 +1,13 @@
+<aura:component controller="EmployeesController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+
+    <ltng:require styles="{!$Resource.FullCalendarJS     + '/fullcalendar.min.css'}" scripts="{!join(',',
+                           $Resource.FullCalendarJS  + '/jquery.min.js',
+                           $Resource.FullCalendarJS  + '/moment.min.js',
+                           $Resource.FullCalendarJS  + '/fullcalendar.min.js'
+                           )}" afterScriptsLoaded="{!c.afterScriptsLoaded}" />
+
+    <ltng:require styles="/resource/FullCalendarJS/fullcalendar.css" />
+    <div style="background:#ffffff;" class="slds-grid">
+        <div id="calendar" class="fullcalendarjs"></div>
+    </div>
+</aura:component>
